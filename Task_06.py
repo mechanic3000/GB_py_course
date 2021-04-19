@@ -14,7 +14,7 @@ def int_func(word):
 
 def check_latin(word):
     for c in word:
-        if ord(c) in range(65, 91) or ord(c) in range(97, 123):
+        if ord(c) in range(65, 91) or ord(c) in range(97, 123):  #  если нужны только маленькие, то первую чать проверки можно убрать.
             continue
         else:
             return False
