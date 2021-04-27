@@ -30,7 +30,7 @@ average_profit = sum(average_profit) / len(average_profit)
 out_info = [firm_dict, {'average_profit': average_profit}]
 
 with open('7.json', 'w') as f_json:
-    json.dump(out_info, f_json)
+    json.dump(out_info, f_json, ensure_ascii=False, indent=4)
 
 with open('7.json') as f_json:
     print(json.load(f_json))
