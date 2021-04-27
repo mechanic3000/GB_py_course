@@ -39,7 +39,9 @@ class Car:
 class TownCar(Car):
     def show_speed(self):
         print(f"Скорость автомобиля {self.color} {self.name} - {self._speed} км/ч")
-        PoliceCar.looking(self._speed)
+        if self._speed > 60:
+            print("ПРЕВЫЕШЕНИЕ СКОРОСТИ!!!")
+            PoliceCar.looking()
 
 
 class SportCar(Car):
@@ -49,20 +51,20 @@ class SportCar(Car):
 class WorkCar(Car):
     def show_speed(self):
         print(f"Скорость автомобиля {self.color} {self.name} - {self._speed} км/ч")
-        PoliceCar.looking(self._speed)
+        if self._speed > 40:
+            print("ПРЕВЫЕШЕНИЕ СКОРОСТИ!!!")
+            PoliceCar.looking()
 
 
 class PoliceCar(Car):
     @staticmethod
-    def looking(speed):
-        if speed > 40:
-            print("ПРЕВЫЕШЕНИЕ СКОРОСТИ!!!")
-            if random.choice([True, False]):
-                print("Oooops, его засекли!")
-                some_p_car = PoliceCar("Ford", "белый", True)
-                some_p_car.set_speed(90)
-            else:
-                print("На этот раз ему повезло! Его не заметили.")
+    def looking():
+        if random.choice([True, False]):
+            print("Oooops, его засекли!")
+            some_p_car = PoliceCar("Ford", "белый", True)
+            some_p_car.set_speed(90)
+        else:
+            print("На этот раз ему повезло! Его не заметили.")
 
 
 t_car1 = TownCar("Toyota", "белый")
