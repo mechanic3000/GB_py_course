@@ -51,3 +51,6 @@ print()
 co = Costume('Love', 1.85)
 print(co.title)
 print(co.consumption)
+
+print()
+print(c.consumption + co.consumption)
